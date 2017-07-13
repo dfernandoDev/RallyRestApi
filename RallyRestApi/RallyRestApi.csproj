@@ -32,7 +32,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,6 +43,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthenticatorUI\frmAuthenticate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthenticatorUI\frmAuthenticate.Designer.cs">
+      <DependentUpon>frmAuthenticate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuthenticatorUI\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthenticatorUI\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuthenticatorUI\frmWorkspaceSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthenticatorUI\frmWorkspaceSelector.Designer.cs">
+      <DependentUpon>frmWorkspaceSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\BuildDefinitions.cs" />
+    <Compile Include="Projects\Children.cs" />
+    <Compile Include="Projects\Editors.cs" />
+    <Compile Include="Projects\Iterations.cs" />
+    <Compile Include="Projects\Owner.cs" />
+    <Compile Include="Projects\ProjectRoot.cs" />
+    <Compile Include="Projects\QueryResult.cs" />
+    <Compile Include="Projects\Releases.cs" />
+    <Compile Include="Projects\Result.cs" />
+    <Compile Include="Projects\RevisionHistory.cs" />
+    <Compile Include="Projects\Subscription.cs" />
+    <Compile Include="Projects\TeamMembers.cs" />
+    <Compile Include="Projects\Workspace.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RallyConstants.cs" />
     <Compile Include="RestClient.cs" />
@@ -59,6 +92,16 @@
     <Compile Include="Workspaces\WorkspaceConfiguration.cs" />
     <Compile Include="Workspaces\WorkspaceRoot.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="AuthenticatorUI\frmAuthenticate.resx">
+      <DependentUpon>frmAuthenticate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuthenticatorUI\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuthenticatorUI\frmWorkspaceSelector.resx">
+      <DependentUpon>frmWorkspaceSelector.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

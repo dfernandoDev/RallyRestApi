@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RallyRestApi.Subscriptions;
+using RallyRestApi.Projects;
 using RallyRestApi.Utils;
 using System;
 using System.Collections.Generic;
@@ -17,8 +18,17 @@ namespace RallyRestApi.Utils.Tests
         {
             string jsonRootSubscription = "";
             SubscriptionRoot subscriptionRoot = JsonToObject.Deserialize<SubscriptionRoot>(jsonRootSubscription);
-            Subscription subscription = subscriptionRoot.Subscription;
+            Subscriptions.Subscription subscription = subscriptionRoot.Subscription;
             Assert.AreEqual("2", subscription._rallyAPIMajor);
+        }
+
+        [TestMethod()]
+        public void DeserializeProjectTest()
+        {
+            string jsonProjectRoot = "";
+            ProjectRoot projectRoot = JsonToObject.Deserialize<ProjectRoot>(jsonProjectRoot);
+            Projects.QueryResult project = projectRoot.QueryResult;
+            Assert.AreEqual("2", project.Results[0]._rallyAPIMajor);
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RallyRestApi.Utils;
 using RallyRestApi.Workspaces;
+using RallyRestApi.Projects;
 
 namespace RallyRestApi
 {
@@ -51,13 +52,22 @@ namespace RallyRestApi
             return subscriptionRoot.Subscription;
         }
 
-        public async Task<QueryResult> GetWorkspacesAsync(string wkspaceUrl)
+        public async Task<Workspaces.QueryResult> GetWorkspacesAsync(string wkspaceUrl)
         {
             string jsonWorkspaceRoot = await GetCall(wkspaceUrl);
 
             WorkspaceRoot workspaceRoot = JsonToObject.Deserialize<WorkspaceRoot>(jsonWorkspaceRoot);
 
             return workspaceRoot.QueryResult;
+        }
+
+        public async Task<Projects.QueryResult> GetProjectsAsync(string projectUrl)
+        {
+            string jsonProjectRoot = await GetCall(projectUrl);
+
+            ProjectRoot projectRoot = JsonToObject.Deserialize<ProjectRoot>(jsonProjectRoot);
+
+            return projectRoot.QueryResult;
         }
     }
 }
