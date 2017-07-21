@@ -43,6 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Artifacts\ArtifactRoot.cs" />
+    <Compile Include="Artifacts\Children.cs" />
+    <Compile Include="Artifacts\Children2.cs" />
+    <Compile Include="Artifacts\Defects.cs" />
+    <Compile Include="Artifacts\Iteration.cs" />
+    <Compile Include="Artifacts\Owner.cs" />
+    <Compile Include="Artifacts\Owner2.cs" />
+    <Compile Include="Artifacts\Project.cs" />
+    <Compile Include="Artifacts\Project2.cs" />
+    <Compile Include="Artifacts\Project3.cs" />
+    <Compile Include="Artifacts\QueryResult.cs" />
+    <Compile Include="Artifacts\Release.cs" />
+    <Compile Include="Artifacts\Result.cs" />
+    <Compile Include="Artifacts\Sums.cs" />
+    <Compile Include="Artifacts\Tags.cs" />
+    <Compile Include="Artifacts\TagsNameArray.cs" />
+    <Compile Include="Artifacts\Tasks.cs" />
+    <Compile Include="Artifacts\TestCases.cs" />
     <Compile Include="AuthenticatorUI\frmAuthenticate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +79,18 @@
     <Compile Include="AuthenticatorUI\frmWorkspaceSelector.Designer.cs">
       <DependentUpon>frmWorkspaceSelector.cs</DependentUpon>
     </Compile>
+    <Compile Include="Iteration\Iterations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Iteration\Iterations.Designer.cs">
+      <DependentUpon>Iterations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Iteration\Project.cs" />
+    <Compile Include="Iteration\QueryResult.cs" />
+    <Compile Include="Iteration\Result.cs" />
+    <Compile Include="Iteration\IterationRoot.cs" />
+    <Compile Include="Iteration\Workspace.cs" />
+    <Compile Include="Iteration\Workspace2.cs" />
     <Compile Include="Projects\BuildDefinitions.cs" />
     <Compile Include="Projects\Children.cs" />
     <Compile Include="Projects\Editors.cs" />
@@ -102,6 +132,10 @@
     <EmbeddedResource Include="AuthenticatorUI\frmWorkspaceSelector.resx">
       <DependentUpon>frmWorkspaceSelector.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Iteration\Iterations.resx">
+      <DependentUpon>Iterations.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

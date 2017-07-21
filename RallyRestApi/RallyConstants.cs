@@ -9,11 +9,11 @@ namespace RallyRestApi
     static class RallyConstants
     {
         public const string Rally_SSO_URL= "";
-
         public const string Rally_SessionID_Key = "ZSESSIONID";
 
-        public const string RALLY_SUBSCRIPTION = "/slm/webservice/v2.0/subscription";
-        public const string RALLY_WORKSPACE = "&workspace=/workspace/";
-
+        public const string RALLY_API_ENDPOINT = "/slm/webservice/v2.0";
+        public const string RALLY_SUBSCRIPTION = "/subscription";
+        public const string RALLY_ITERATION = "/Iteration";
+        public const string RALLY_ARTIFACT = "/artifact";
     }
 }
